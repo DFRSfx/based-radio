@@ -1,45 +1,69 @@
 <div class="streams">
-  <center>
-    <img src="/favicon.png"><br>
-    <div class="music-info" id="total-listeners">
-     <strong>Total Listeners:</strong>
+  <div class="receiver" id="receiver">
+    <div class="receiver-head">
+      <img src="/favicon.png" alt="Radio Nigga">
+      <div class="music-info" id="total-listeners">
+        <strong>Total Listeners:</strong>
+      </div>
     </div>
-  </center>
+
+    <div class="lcd" aria-live="polite">
+      <div class="lcd-row">
+        <span id="lcd-channel">CH --</span>
+        <span id="lcd-station">NO SIGNAL</span>
+        <span id="lcd-listeners"></span>
+      </div>
+      <div class="lcd-track"><span id="lcd-track">Pick a station</span></div>
+      <div class="vu" id="vu" aria-hidden="true"></div>
+    </div>
+
+    <div class="dial" aria-hidden="true"><div class="needle" id="needle"></div></div>
+
+    <div class="controls">
+      <button type="button" id="prev" aria-label="Previous station">&#9198;</button>
+      <button type="button" id="play" aria-label="Play">&#9654;</button>
+      <button type="button" id="next" aria-label="Next station">&#9197;</button>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
+    </div>
+
+    <audio id="player" preload="none" crossorigin="anonymous"></audio>
+  </div>
+
 <div class="list">
-<section>
-  <a href="https://nigga.pt/chill.ogg" target="_blank">chill.ogg</a> - <code>https://nigga.pt/chill.ogg</code><br>
-  <audio controls preload="none" src="https://nigga.pt/chill.ogg"></audio><br>
+<section class="station" data-mount="chill">
+  <button type="button" class="tune">chill</button>
   <div class="music-info" id="chill-info"></div>
+  <a href="https://nigga.pt/chill.ogg" target="_blank">chill.ogg</a> - <code>https://nigga.pt/chill.ogg</code>
 </section>
 
-<section>
-  <a href="https://nigga.pt/party.ogg" target="_blank">party.ogg</a> - <code>https://nigga.pt/party.ogg</code><br>
-  <audio controls preload="none" src="https://nigga.pt/party.ogg"></audio><br>
+<section class="station" data-mount="party">
+  <button type="button" class="tune">party</button>
   <div class="music-info" id="party-info"></div>
+  <a href="https://nigga.pt/party.ogg" target="_blank">party.ogg</a> - <code>https://nigga.pt/party.ogg</code>
 </section>
 
-<section>
-  <a href="https://nigga.pt/hood.ogg" target="_blank">hood.ogg</a> - <code>https://nigga.pt/hood.ogg</code><br>
-  <audio controls preload="none" src="https://nigga.pt/hood.ogg"></audio><br>
+<section class="station" data-mount="hood">
+  <button type="button" class="tune">hood</button>
   <div class="music-info" id="hood-info"></div>
+  <a href="https://nigga.pt/hood.ogg" target="_blank">hood.ogg</a> - <code>https://nigga.pt/hood.ogg</code>
 </section>
 
-<section>
-  <a href="https://nigga.pt/brutal.ogg" target="_blank">brutal.ogg</a> - <code>https://nigga.pt/brutal.ogg</code><br>
-  <audio controls preload="none" src="https://nigga.pt/brutal.ogg"></audio><br>
+<section class="station" data-mount="brutal">
+  <button type="button" class="tune">brutal</button>
   <div class="music-info" id="brutal-info"></div>
+  <a href="https://nigga.pt/brutal.ogg" target="_blank">brutal.ogg</a> - <code>https://nigga.pt/brutal.ogg</code>
 </section>
 
-<section>
-  <a href="https://nigga.pt/doom.ogg" target="_blank">doom.ogg</a> - <code>https://nigga.pt/doom.ogg</code><br>
-  <audio controls preload="none" src="https://nigga.pt/doom.ogg"></audio><br>
+<section class="station" data-mount="doom">
+  <button type="button" class="tune">doom</button>
   <div class="music-info" id="doom-info"></div>
+  <a href="https://nigga.pt/doom.ogg" target="_blank">doom.ogg</a> - <code>https://nigga.pt/doom.ogg</code>
 </section>
 
-<section>
-  <a href="https://nigga.pt/alt.ogg" target="_blank">alt.ogg</a> - <code>https://nigga.pt/alt.ogg</code><br>
-  <audio controls preload="none" src="https://nigga.pt/alt.ogg"></audio><br>
+<section class="station" data-mount="alt">
+  <button type="button" class="tune">alt</button>
   <div class="music-info" id="alt-info"></div>
+  <a href="https://nigga.pt/alt.ogg" target="_blank">alt.ogg</a> - <code>https://nigga.pt/alt.ogg</code>
 </section>
 </div>
 </div>

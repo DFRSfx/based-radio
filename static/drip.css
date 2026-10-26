@@ -1,0 +1,190 @@
+@font-face {
+  font-family: 'font';
+  src: url('/font/font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'font';
+  src: url('/font/font-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+    background-image: url("/bg.jpg");
+    background-repeat: repeat;
+    color: #fff;
+    max-width: 80%;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  	margin: auto;
+    font-family: font;
+    font-weight: normal;
+    line-height: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+main {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    min-height: 0;
+}
+
+.streams {
+  flex: 1;
+}
+
+.info {
+  flex: 1;
+}
+
+.live {
+  flex: 2;
+}
+
+.streams, .info, .live {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  min-width: 0;
+  min-height: 0;
+  border: solid aqua thin;
+  overflow: auto;
+}
+
+.streams {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.list {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.live {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.live .links {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.live iframe {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  border: 0;
+}
+
+.nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem;
+    border: solid aqua thin;
+}
+
+section {
+  padding: 0.5rem 0;
+}
+
+section::before {
+  content: "";
+  display: block;
+  width: 4rem;
+  border-top: solid aqua thin;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+    padding: 0.5rem 0 0 0;
+}
+
+img {
+  text-align: center;
+	max-width: 100%;
+}
+
+video {
+  text-align: center;
+	max-width: 100%;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+h1 {
+    color: #ff0800;
+    font-weight: bold;
+}
+
+h2 {
+    color: #ff0800;
+    font-weight: bold;
+}
+
+h3 {
+    color: #ff0800;
+    font-weight: bold;
+}
+
+a {
+    color: #00ff00;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+summary {
+  color: #008800;
+}
+
+summary:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+pre {
+  font-family: inherit;
+}
+
+code {
+  color: #008800;
+  font-family: inherit;
+}
+
+@media (max-width: 700px) {
+  html, body {
+    height: auto;
+  }
+  main {
+    flex-direction: column;
+  }
+  .streams, .info, .live, .list {
+    overflow: visible;
+  }
+  .live iframe {
+    height: 40vh;
+  }
+}
